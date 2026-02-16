@@ -16,7 +16,13 @@
 			<p style="font-weight: 500; margin-top: 2.5em; margin-bottom: 0.25em;">If this resonates, say hi:</p>
 
 			<p style="margin-top: 0;">
-			<a href="mailto:emir.cognigni@gmail.com">emir.cognigni@gmail.com</a><br>
+			<span id="email"></span><br>
+			<script>
+				const user = "emir.cognigni";
+				const domain = "gmail.com";
+				document.getElementById("email").innerHTML =
+					`<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+			</script>
 			<a href="https://github.com/emirfabio" target="_blank" rel="noopener noreferrer">GitHub</a>
 			</p>
 		</main>
