@@ -3,11 +3,18 @@ body {
   min-height: 100svh;
   display: grid;
   place-items: center;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 main {
-  max-width: 40rem;
+  max-width: 36rem;
   padding: 2rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.75em;
+  margin-bottom: 0.25em;
 }
 
 a {
