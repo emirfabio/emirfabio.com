@@ -1,32 +1,47 @@
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Emir Cognigni</title>
+		<meta name="description" content="Emir Cognigni — software engineer working on systems, iOS/macOS, and local-first tools.">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
 		<main>
-			<h1>Hello,</h1>
-			<p>
-			My name is <strong>Emir</strong>. <br>
-			I enjoy building software, thinking about systems and talking to humans.
-			</p>
-			<p>Currently building local-first tools.</p>
-			<p style="font-weight: 500; margin-top: 2.5em; margin-bottom: 0.25em;">If this resonates, say hi:</p>
+			<h1><span class="hello">Hello,</span></h1>
 
-			<p style="margin-top: 0;">
-			<span id="email"></span><br>
+			<p class="lede">
+				My name is <strong>Emir</strong>. Software engineer working on systems, iOS/macOS, occasionally geospatial.
+			</p>
+
+			<p class="lede">
+				I build things, and occasionally fix other people's.
+			</p>
+
+			<p class="now">
+				<span class="dot" aria-hidden="true"></span>
+				<span class="now-label">Currently</span>
+				local-first tools, and a refactoring service for codebases that have gotten hard to work in.
+			</p>
+
+			<hr>
+
+			<p class="contact">
+				<span id="email"></span>
+				<span class="sep" aria-hidden="true">·</span>
+				<a href="https://github.com/emirfabio" target="_blank" rel="noopener noreferrer">GitHub</a>
+			</p>
+
 			<script>
 				const user = "emir.cognigni";
 				const domain = "gmail.com";
 				document.getElementById("email").innerHTML =
 					`<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
 			</script>
-			<a href="https://github.com/emirfabio" target="_blank" rel="noopener noreferrer">GitHub</a>
-			</p>
 		</main>
 	</body>
 </html>
