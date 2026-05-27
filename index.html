@@ -11,45 +11,61 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
+		<div class="grain" aria-hidden="true"></div>
 		<main>
-			<h1><span class="hello">Hello,</span></h1>
+			<header class="intro">
+				<h1>
+					<span class="hello">Hello<span class="hello-comma">,</span></span>
+				</h1>
 
-			<p class="lede">
-				My name is <strong>Emir</strong>, <br> 
-				Software engineer working on systems, iOS/macOS, occasionally geospatial.
-			</p>
-			<divider>
+				<p class="lede">
+					My name is <strong>Emir</strong>.<br>
+					Software engineer working on systems, iOS/macOS, occasionally geospatial.
+				</p>
+			</header>
 
-			<p class="now">
-				<span class="dot" aria-hidden="true"></span>
-				<span class="now-label">Currently</span>
-				<ul>
-					<li> local-first tools</li>
-					<li>a refactoring service for codebases that have gotten hard to work in.</li>
-				</ul>
-			</p>
+			<section class="timeline" aria-label="Work">
+				<article class="entry entry--now">
+					<div class="entry-meta">
+						<span class="dot" aria-hidden="true"></span>
+						<time class="entry-label" datetime="2025-01/..">Since Jan&nbsp;2025</time>
+					</div>
+					<div class="entry-body">
+						<p class="entry-role">Freelance Software Engineer</p>
+						<ul class="entry-focus">
+							<li><a href="https://reaas.dev" target="_blank" rel="noopener noreferrer">reaas.dev</a> — refactoring service for production codebases</li>
+							<li class="focus--soon">
+								<span class="focus-name">project.01</span> · a local-first journal for work
+								<span class="soon-tag" aria-label="coming soon">soon</span>
+							</li>
+						</ul>
+					</div>
+				</article>
 
-			<p class="now">
-				<span class="dot" aria-hidden="true"></span>
-				<span class="now-label">Jun 2020 <br>to Jun 2025</span>
-				<ul>
-					<li> Software Engineer for Aton S.p.A.</li>
-				</ul>
-			</p>
+				<article class="entry">
+					<div class="entry-meta">
+						<time class="entry-label" datetime="2020-06/2025-06">Jun&nbsp;2020 — Jun&nbsp;2025</time>
+					</div>
+					<div class="entry-body">
+						<p class="entry-role">Software Engineer at Aton&nbsp;S.p.A.</p>
+					</div>
+				</article>
+			</section>
 
-			<hr>
-
-			<p class="contact">
+			<footer class="contact">
 				<span id="email"></span>
 				<span class="sep" aria-hidden="true">·</span>
 				<a href="https://github.com/emirfabio" target="_blank" rel="noopener noreferrer">GitHub</a>
-			</p>
+			</footer>
 
 			<script>
 				const user = "hello";
 				const domain = "emirfabio.com";
-				document.getElementById("email").innerHTML =
-					`<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+				const slot = document.getElementById("email");
+				const a = document.createElement("a");
+				a.href = `mailto:${user}@${domain}`;
+				a.textContent = `${user}@${domain}`;
+				slot.replaceWith(a);
 			</script>
 		</main>
 	</body>
